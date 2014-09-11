@@ -1,0 +1,6 @@
+development: &development
+  facebook:
+    app_id: "1450705208487533"
+    app_secret: "1a4a3a35dce49bb68a3a0545ab382d55"
+
+test: *development
