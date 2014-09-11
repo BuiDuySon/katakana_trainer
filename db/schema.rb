@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140911102029) do
+ActiveRecord::Schema.define(version: 20140911113006) do
+
+  create_table "m_words", force: true do |t|
+    t.string   "katakana"
+    t.string   "english"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
