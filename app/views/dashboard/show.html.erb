@@ -1,2 +1,10 @@
-<%= link_to t("Katakana -> English"), questions_path(type: "english"), method: :post %><br>
-<%= link_to t("English -> Katakana"), questions_path(type: "katakana"), method: :post %>
+      <div class="jumbotron">
+        <h1>Top Menu</h1>
+            <p>このサービスは日本語を非母国語とする方に向けて、日本語と併用して頻繁に利用されるIT用語を学習するものです。</p>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p><%= link_to t("Katakana -> English"), questions_path(type: "english"), method: :post, class: %w(btn btn-primary btn-lg) %></p>
+            <p><%= link_to t("English -> Katakana"), questions_path(type: "katakana"), method: :post, class: %w(btn btn-primary btn-lg) %></p>
+          </div>
+        </div>
+      </div>
