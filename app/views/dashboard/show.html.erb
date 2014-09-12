@@ -1,1 +1,2 @@
-<%= link_to t("challenge"), questions_path, method: :post %>
+<%= link_to t("Katakana -> English"), questions_path(type: "english"), method: :post %><br>
+<%= link_to t("English -> Katakana"), questions_path(type: "katakana"), method: :post %>

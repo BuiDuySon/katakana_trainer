@@ -1,7 +1,6 @@
-■カタカナ<br>
-<%= @answer.m_word.katakana %><br>
-<%= form_for [@question, @answer] do |f| %>
-<%= f.text_field :english %>
+Question: <%= @answer.m_word.question_word %><br>
+<%= form_for [@question.becomes(Question), @answer] do |f| %>
+<%= f.text_field :characters %>
 <%= f.hidden_field :m_word_id %>
 <%= f.submit %>
 <% end %>
