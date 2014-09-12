@@ -5,5 +5,9 @@ Rails.application.routes.draw do
     passwords: "passwords",
     omniauth_callbacks: "omniauth_callbacks"
   }
+  root "dashboard#show"
   resources :users
+  resources :questions do
+    resources :answers
+  end
 end
