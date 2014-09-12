@@ -12,6 +12,10 @@ class Question < ActiveRecord::Base
     self.m_word_ids = _m_words.map &:id
   end
 
+  def m_words_to_answer
+    M::Word.where(id: (self.m_word_ids - answers.pluck(:m_word_id)))
+  end
+
   class << self
     def create_for! user
       question = Question.new(user_id: user.id)
