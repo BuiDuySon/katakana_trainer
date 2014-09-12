@@ -5,6 +5,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :omniauthable, :registerable,
    :recoverable, :rememberable, :trackable, :validatable
 
+  def m_word_ids
+    self.questions.inject([]) do |words, question|
+      words << question.m_word_ids
+    end.flatten
+  end
+
   class << self
     def find_for_facebook_oauth auth, signed_in_resource = nil
       user = User.where(provider: auth.provider, uid: auth.uid).first

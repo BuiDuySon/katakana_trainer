@@ -12,6 +12,15 @@ class Question < ActiveRecord::Base
     self.m_word_ids = _m_words.map &:id
   end
 
+  class << self
+    def create_for! user
+      question = Question.new(user_id: user.id)
+      question.m_word_ids = WordPicker::Simple.new(user).pick
+      question.save
+      question
+    end
+  end
+
   private
   def update_num_m_words!
     self.num_m_words = self.m_word_ids.count
