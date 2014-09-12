@@ -5,8 +5,8 @@ class AnswersController < BaseController
 
   def new
     m_word = @question.m_words_to_answer.first
-    redirect_to root_path unless m_word
-    @answer = Answer.new m_word: m_word
+    return redirect_to root_path unless m_word
+    @answer = Answer.new m_word: m_word, question_id: @question.id
   end
 
   def create
@@ -20,7 +20,8 @@ class AnswersController < BaseController
   end
 
   def build_object
-    @answer = Answer.new({question_id: @question.id}.merge(answer_params))
+    @answer = Answer.new({question_id: @question.id, user_id: current_user.id}
+      .merge(answer_params))
   end
 
   def answer_params

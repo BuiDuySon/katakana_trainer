@@ -5,7 +5,10 @@ class Question < ActiveRecord::Base
   before_save :update_num_m_words!
 
   def m_words
-    M::Word.where(id: self.m_word_ids)
+    m_words = M::Word.where(id: self.m_word_ids)
+    m_words.each do |m_word|
+      m_word.question_id = self.id
+    end
   end
 
   def m_words= _m_words
@@ -17,8 +20,13 @@ class Question < ActiveRecord::Base
   end
 
   class << self
-    def create_for! user
-      question = Question.new(user_id: user.id)
+    def create_for! user, type = nil
+      klass = if type == "katakana"
+        Question::KatakanaQuestion
+      else
+        Question::EnglishQuestion
+      end
+      question = klass.new(user_id: user.id)
       question.m_word_ids = WordPicker::Simple.new(user).pick
       question.save
       question
@@ -28,5 +36,13 @@ class Question < ActiveRecord::Base
   private
   def update_num_m_words!
     self.num_m_words = self.m_word_ids.count
+  end
+
+  def m_word_question_type
+    raise NotImplementedError
+  end
+
+  def m_word_answer_type
+    raise NotImplementedError
   end
 end
