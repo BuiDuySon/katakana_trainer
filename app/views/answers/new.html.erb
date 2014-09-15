@@ -1,6 +1,21 @@
-Question: <%= @answer.m_word.question_word %><br>
-<%= form_for [@question.becomes(Question), @answer] do |f| %>
-<%= f.text_field :characters %>
-<%= f.hidden_field :m_word_id %>
-<%= f.submit %>
-<% end %>
+      <div class="jumbotron">
+        <h3>Question</h3>
+          <h2><%= @answer.m_word.question_word %></h2>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <%= form_for [@question.becomes(Question), @answer] do |f| %>
+              <div class="form-groupi panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Answer</h3>
+                </div>
+                <div class="panel-body">
+                  <%= f.text_field :characters, class: %w(form-control input-lg) %>
+                  <%= f.hidden_field :m_word_id %>
+                </div>
+                <br>
+                <p><%= f.submit "Submit", class: %w(btn btn-primary btn-lg) %><p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
