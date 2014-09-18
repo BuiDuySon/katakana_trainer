@@ -5,6 +5,7 @@ set :application, "katakana_trainer"
 set :scm, :git
 set :repo_url, "git@github.com:framgia/katakana_trainer.git"
 set :deploy_to, "/usr/local/rails_apps/katakana_trainer"
+set :deploy_env, ["KATAKANA_TRAINER_DATABASE_PASSWORD"]
 if ENV["DEPLOY_BRANCH"]                                                         
   set :branch, ENV["DEPLOY_BRANCH"]                                             
 else                                                                            
