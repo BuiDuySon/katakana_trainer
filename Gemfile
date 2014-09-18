@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source "http://rubygems.org"
 
 # Rails original
 gem "rails", "4.1.5"
@@ -23,6 +23,14 @@ gem "less-rails"
 gem "ransack"
 gem "kaminari"
 gem "cancan", "~> 1.6.1"
+gem "unicorn"
+gem "highline"
+gem "net-sftp"
+gem "net-ssh-gateway"
+gem "capistrano", "~> 3.2.0"
+gem "capistrano-rails"                                                          
+gem "capistrano-rvm"                                                            
+gem "capistrano-bundler"  
 
 group :doc do
   gem "sdoc", "~> 0.4.0"
@@ -57,12 +65,6 @@ end
 
 # Use ActiveModel has_secure_password
 # gem "bcrypt", "~> 3.1.7"
-
-# Use unicorn as the app server
-# gem "unicorn"
-
-# Use Capistrano for deployment
-# gem "capistrano-rails", group: :development
 
 # Use debugger
 # gem "debugger", group: [:development, :test]
