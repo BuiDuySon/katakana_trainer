@@ -53,4 +53,4 @@ production:
   host: localhost
   database: katakana_trainer
   username: katakana_trainer
-  password: <%= ENV['KATAKANA_TRAINER_DATABASE_PASSWORD'] %>
+  password: <%= binding.pry; ENV['KATAKANA_TRAINER_DATABASE_PASSWORD'] %>
