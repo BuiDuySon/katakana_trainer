@@ -28,15 +28,16 @@ gem "highline"
 gem "net-sftp"
 gem "net-ssh-gateway"
 gem "capistrano", "~> 3.2.0"
-gem "capistrano-rails"                                                          
-gem "capistrano-rvm"                                                            
-gem "capistrano-bundler"  
+gem "capistrano-rails"
+gem "capistrano-rvm"
+gem "capistrano-bundler"
 
 group :doc do
   gem "sdoc", "~> 0.4.0"
 end
 
 group :development, :test do
+  gem "rb-readline"
   gem "pry-rails"
   gem "pry"
   gem "pry-debugger"
