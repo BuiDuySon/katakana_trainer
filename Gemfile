@@ -37,10 +37,10 @@ group :doc do
 end
 
 group :development, :test do
-  gem "rb-readline"
+  gem "byebug"
   gem "pry-rails"
   gem "pry"
-  gem "pry-debugger"
+  gem "pry-byebug"
   gem "rspec-rails"
   gem "factory_girl_rails"
   gem "better_errors"
