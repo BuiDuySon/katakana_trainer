@@ -260,4 +260,5 @@ Devise.setup do |config|
 
   config.omniauth :facebook, AUTH_PROVIDER_CONFIG["facebook"]["app_id"], AUTH_PROVIDER_CONFIG["facebook"]["app_secret"]
   config.omniauth :twitter, AUTH_PROVIDER_CONFIG["twitter"]["app_id"], AUTH_PROVIDER_CONFIG["twitter"]["app_secret"], {scope: "offline_access,email"}
+  config.omniauth :google_oauth2, AUTH_PROVIDER_CONFIG["google_oauth2"]["app_id"], AUTH_PROVIDER_CONFIG["google_oauth2"]["app_secret"]
 end

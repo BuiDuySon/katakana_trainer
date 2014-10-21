@@ -209,6 +209,15 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (1.4.0)
       omniauth-oauth2 (~> 1.0.2)
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    omniauth-google-oauth2 (0.2.2)
+      omniauth (~> 1.0)
+      omniauth-oauth2
+=======
+>>>>>>> ffe1a40... task #21036 Twitterでログインできるようにする
+>>>>>>> 2111b4e... Google+ でログインできるようにする
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
@@ -392,6 +401,13 @@ DEPENDENCIES
   net-ssh-gateway
   omniauth
   omniauth-facebook
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  omniauth-google-oauth2
+=======
+>>>>>>> ffe1a40... task #21036 Twitterでログインできるようにする
+>>>>>>> 2111b4e... Google+ でログインできるようにする
   omniauth-twitter
   pry
   pry-byebug
