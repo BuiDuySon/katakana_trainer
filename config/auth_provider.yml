@@ -2,6 +2,9 @@ development: &development
   facebook:
     app_id: "1450705208487533"
     app_secret: "1a4a3a35dce49bb68a3a0545ab382d55"
+  twitter:
+    app_id: "bUk4dJiznEF2buSo60OFcSOAU"
+    app_secret: "w2NxHQRmXf8LWBUroVRctldo0CO8CN9xJTegHjxqGEYIKiu0pf"
 
 test: *development
 
@@ -9,3 +12,6 @@ production:
   facebook:
     app_id: "1450703601821027"
     app_secret: "c0336df101c025bd3a9706b0c1af4960"
+  twitter:
+    app_id: "bUk4dJiznEF2buSo60OFcSOAU"
+    app_secret: "w2NxHQRmXf8LWBUroVRctldo0CO8CN9xJTegHjxqGEYIKiu0pf"
