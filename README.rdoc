@@ -10,8 +10,10 @@ Things you may want to cover:
 2.1.2
 
 * System dependencies
+Ruby + Rails
 
 * Configuration
+MySQL
 
 * Database creation
 
