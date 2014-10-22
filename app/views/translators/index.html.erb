@@ -1,0 +1,7 @@
+Bing translate : 
+<%= 
+  translator = Translator.instance
+  original_text = params[:text]
+  vietnamese_text = translator.translate original_text, :to => 'vi'
+  vietnamese_text
+%>
