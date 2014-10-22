@@ -259,5 +259,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
   config.omniauth :facebook, AUTH_PROVIDER_CONFIG["facebook"]["app_id"], AUTH_PROVIDER_CONFIG["facebook"]["app_secret"]
-
+  config.omniauth :twitter, AUTH_PROVIDER_CONFIG["twitter"]["app_id"], AUTH_PROVIDER_CONFIG["twitter"]["app_secret"], {scope: "offline_access,email"}
 end
