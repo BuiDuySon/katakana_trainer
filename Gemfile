@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-
+gem "rb-readline"
 # Rails original
 gem "rails", "4.1.5"
 gem "mysql2"
