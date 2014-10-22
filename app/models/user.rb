@@ -50,4 +50,16 @@ class User < ActiveRecord::Base
               )
     end
   end
+  def self.find_for_google_oauth2_oauth auth, signed_in_resource = nil
+    if user = User.where(provider: auth.provider, uid: auth.uid).first
+      user
+    else 
+      user = User.create(name: auth.info.name,
+                  provider: auth.provider, 
+                  uid: auth.uid,
+                  email: auth.info.email,
+                  password: Devise.friendly_token[0,20]
+              )
+    end
+  end
 end

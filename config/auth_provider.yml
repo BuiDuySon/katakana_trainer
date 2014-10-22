@@ -5,6 +5,9 @@ development: &development
   twitter:
     app_id: "bUk4dJiznEF2buSo60OFcSOAU"
     app_secret: "w2NxHQRmXf8LWBUroVRctldo0CO8CN9xJTegHjxqGEYIKiu0pf"
+  google_oauth2:
+    app_id: "1040729385488-1cmkc86rboh3ct39e426ppu2ie1pd0gl.apps.googleusercontent.com"
+    app_secret: "F1fRBg2wv2adMQDLISW1ByOX"
 
 test: *development
 
@@ -15,3 +18,6 @@ production:
   twitter:
     app_id: "bUk4dJiznEF2buSo60OFcSOAU"
     app_secret: "w2NxHQRmXf8LWBUroVRctldo0CO8CN9xJTegHjxqGEYIKiu0pf"
+  google_oauth2:
+    app_id: "1040729385488-1cmkc86rboh3ct39e426ppu2ie1pd0gl.apps.googleusercontent.com"
+    app_secret: "F1fRBg2wv2adMQDLISW1ByOX"
