@@ -11,6 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/core 
+//= require jquery-ui/widget 
+//= require jquery-ui/button 
+//= require jquery-ui/draggable 
+//= require jquery-ui/position 
+//= require jquery-ui/resizable
+//= require jquery-ui/effect
+//= require jquery-ui/dialog
 //= require jquery_ujs
 //= require readable/loader
 //= require readable/bootswatch

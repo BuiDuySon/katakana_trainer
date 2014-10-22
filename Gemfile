@@ -10,8 +10,9 @@ gem "therubyracer",  platforms: :ruby
 gem "jquery-rails"
 gem "turbolinks"
 gem "jbuilder", "~> 2.0"
-
+gem "jquery-ui-rails"
 # added
+gem 'twitter-bootstrap-rails', '~> 3.2.0'
 gem "rails_config"
 gem "devise"
 gem "omniauth"
