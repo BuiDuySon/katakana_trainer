@@ -34,6 +34,8 @@ gem "capistrano", "~> 3.2.0"
 gem "capistrano-rails"
 gem "capistrano-rvm"
 gem "capistrano-bundler"
+gem "bing_translator", "~> 4.4.1"
+gem "rubyntlm", "~> 0.4.0"
 
 group :doc do
   gem "sdoc", "~> 0.4.0"
@@ -66,6 +68,8 @@ group :test do
   gem "growl"
   gem "capybara-mechanize"
 end
+
+
 
 # Use ActiveModel has_secure_password
 # gem "bcrypt", "~> 3.1.7"
