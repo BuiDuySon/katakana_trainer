@@ -1,2 +1,5 @@
 question:
   num_words: 10
+admin:
+  - provider: facebook
+    uid: "10203903552204533"

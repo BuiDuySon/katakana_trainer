@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
     end.flatten
   end
 
+  def admin?
+    {provider: self.provider, uid: self.uid}.in? Settings.admin.map &:to_hash
+  end
+
   class << self
     def find_for_facebook_oauth auth, signed_in_resource = nil
       user = User.where(provider: auth.provider, uid: auth.uid).first
