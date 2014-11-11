@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   end
   resources :answers
   resources :translators
+
+  namespace :admin do
+    root "dashboard#show"
+  end
 end
