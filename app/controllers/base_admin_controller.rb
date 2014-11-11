@@ -4,8 +4,7 @@ class BaseAdminController < ApplicationController
 
   private
   def require_admin!
-    return root_path unless current_user
-    true #TODO: implement
+    return redirect_to root_path unless current_user && current_user.admin?
   end
 
 end
