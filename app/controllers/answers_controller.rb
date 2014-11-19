@@ -5,7 +5,7 @@ class AnswersController < BaseController
 
   def index
     return redirect_to(root_path) unless current_user
-    @answers = Answer.where user_id: current_user.id
+    @answers = Answer.group(:question_id).where(user_id: current_user.id).select("question_id, count(*) as countdata, sum(correct) as sum")
   end
 
   def new
